@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.move-div{
+    background-color: saddlebrown;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 35px;
+    animation-name: move;
+    animation-duration: 4s;
+}
+
+
+@keyframes move{
+    0%{
+        transform: translateX(0);
+        background-color: red;
+
+    }
+    50%{
+        transform: translateX(50%);
+        background-color: green;
+
+    }
+    100%{
+        transform: translateX(100%);
+        background-color: blue;
+    }
+}
+
+.spin-div{
+    background-color: darkblue;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 35px;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+
+h1{
+    margin: 30px 20px;
+    font-size: 2rem;
+    color: steelblue;
+    display: inline-block;
+    font-weight: 600;
+    animation: spin 1s infinite reverse linear;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(369deg);
+    }
+}
+
+
+
+.rainbow-div{
+    background-color: mediumaquamarine;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 35px;
+    animation-name: rainbow;
+    animation-duration: 4s;
+}
+
+@keyframes rainbow{
+    0%{
+        background-color: red;
+    }
+    20%{
+        background-color: green;
+    }
+    35%{
+        background-color: blue;
+    }
+}
+
+
+.bounce-div{
+    background-color: deepskyblue;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 35px;
+    animation-name: bounce;
+    animation-duration: 4s;
+
+}
+
+
+.spinner-container{
+    display: flex;
+    justify-content: center;
+}
+
+.spinner{
+    margin: 40px 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid gainsboro;
+    border-top-color: blue;
+    animation: spinner-animation 1s infinite ease-in-out;
+
+}
+
+@keyframes spinner-animation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loader-container{
+    display: flex;
+    justify-content: center;
+}
+
+.loader span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    margin: 15px 10px;
+}
+
+.loader span:nth-child(1){
+    animation: jump 1s infinite ease-in-out;
+}
+
+.loader span:nth-child(2){
+    animation: jump 1s 0.3333s infinite ease-in-out;
+}
+
+.loader span:nth-child(3){
+    animation: jump 1s 0.6666s infinite ease-in-out;
+}
+
+@keyframes jump{
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+}
